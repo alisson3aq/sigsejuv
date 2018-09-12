@@ -13,11 +13,11 @@ return [
     |
     */
 
-    'title' => 'Cariri Inovação',
+    'title' => 'SigSEJUV',
 
     'title_prefix' => '',
 
-    'title_postfix' => '',
+    'title_postfix' => ' | ',
 
     /*
     |--------------------------------------------------------------------------
@@ -30,9 +30,9 @@ return [
     |
     */
 
-    'logo' => '<b>Admin</b>LTE',
+    'logo' => '<b>Sig</b>SEJUV',
 
-    'logo_mini' => '<b>A</b>LT',
+    'logo_mini' => '<i class="fa fa-dashboard fa-x2 fa-fw"></i>',
 
     /*
     |--------------------------------------------------------------------------
@@ -108,81 +108,305 @@ return [
     */
 
     'menu' => [
-        'MAIN NAVIGATION',
+       'NAVEGAÇÃO',
         [
             'text' => 'Blog',
             'url'  => 'admin/blog',
             'can'  => 'manage-blog',
         ],
         [
-            'text'        => 'Pages',
-            'url'         => 'admin/pages',
-            'icon'        => 'file',
-            'label'       => 4,
-            'label_color' => 'success',
-        ],
-        'ACCOUNT SETTINGS',
+            'text'        => 'Dashboard',
+            'url'         => 'home',
+            //'url'         => 'admin/pages',
+            'icon'        => 'dashboard',
+            'icon_color'  => 'yellow',
+            //'label'       => 4,
+            //'label_color' => 'success',
+        ],  
+         'CONFIGURAÇÕES',   
         [
-            'text' => 'Profile',
-            'url'  => 'admin/settings',
-            'icon' => 'user',
-        ],
-        [
-            'text' => 'Change Password',
-            'url'  => 'admin/settings',
-            'icon' => 'lock',
-        ],
-        [
-            'text'    => 'Multilevel',
-            'icon'    => 'share',
+            'text'    => 'Usuários',
+            'icon'    => 'users',
             'submenu' => [
                 [
-                    'text' => 'Level One',
+                    'text' => 'Novo',
+                    'icon' => 'plus',
                     'url'  => '#',
                 ],
                 [
-                    'text'    => 'Level One',
-                    'url'     => '#',
-                    'submenu' => [
-                        [
-                            'text' => 'Level Two',
-                            'url'  => '#',
-                        ],
-                        [
-                            'text'    => 'Level Two',
-                            'url'     => '#',
-                            'submenu' => [
-                                [
-                                    'text' => 'Level Three',
-                                    'url'  => '#',
-                                ],
-                                [
-                                    'text' => 'Level Three',
-                                    'url'  => '#',
-                                ],
-                            ],
-                        ],
-                    ],
+                    'text' => 'Lista',
+                    'icon' => 'list',
+                    'url'  => '#',
+                ],
+            ],
+            
+        ],
+        [
+            'text'    => 'Funções',
+            'icon'    => 'sitemap',
+            'submenu' => [
+                [
+                    'text' => 'Novo',
+                    'icon' => 'plus',
+                    'url'  => '#',
                 ],
                 [
-                    'text' => 'Level One',
+                    'text' => 'Lista',
+                    'icon' => 'list',
+                    'url'  => '#',
+                ],
+            ],
+            
+        ],
+
+        'GABINETE DO SECRETÁRIO(A)',
+        [
+            'text'    => 'AGENDA ',
+            'icon'    => 'book',
+            'icon_color' => 'green',
+            'submenu' => [
+                [
+                    'text' => 'Lista de Eventos',
+                    'icon' => 'calendar',
+                    'icon_color' => 'green',
                     'url'  => '#',
                 ],
             ],
         ],
-        'LABELS',
         [
-            'text'       => 'Important',
-            'icon_color' => 'red',
+            'text'          => 'ASSESSORIAS ',
+            'icon'          => 'handshake-o',
+            'icon_color'    => 'green',
+            'submenu'       => [
+                [
+                    'text'      => 'JURIDICO',
+                    'icon'      => 'balance-scale',
+                    'icon_color'=> 'green',
+                    'submenu'   => [
+                        [
+                            'text'      => 'Processos',
+                            'icon'      => 'folder',
+                            'icon_color'=> 'green',
+                            'url'       => '#',
+                        ],
+                    ],
+                    
+                ],
+            ],
         ],
         [
-            'text'       => 'Warning',
+            'text'          => 'INDICADORES',
+            'icon'          => 'line-chart',
+            'icon_color'    => 'green',
+            'url'           => '#',
+            
+        ],
+
+         'DEP. ADMINISRATIVO FINANCEIRO',
+        [
+            'text'          => 'RECURSOS HUMANOS',
+            'icon'          => 'address-card',
+            'icon_color'    => 'blue',
+            'submenu'       => [
+                [
+                    'text'          => 'SERVIDORES',
+                    'icon'          => 'id-badge',
+                    'icon_color'    => 'blue',
+                    'url'           => '#',
+                ],
+                [
+                    'text'          => 'FÉRIAS',
+                    'icon'          => 'plane',
+                    'icon_color'    => 'blue',
+                    'url'           => '#',
+                ],
+            ],
+        ],
+        [
+            'text'          => 'PROTOCOLO',
+            'icon'          => 'files-o',
+            'icon_color'    => 'blue',
+            'submenu'       => [
+                [
+                    'text'          => 'RECEBIDOS',
+                    'icon'          => 'sign-in',
+                    'icon_color'    => 'blue',
+                    'url'           => '#',
+                ],
+                [
+                    'text'          => 'EXPEDIDOS',
+                    'icon'          => 'sign-out',
+                    'icon_color'    => 'blue',
+                    'url'           => '#',
+                ],
+            ],
+        ],
+        [
+            'text'          => 'PATRIMÔNIO',
+            'icon'          => 'cubes',
+            'icon_color'    => 'blue',
+            'submenu'       => [
+                [
+                    'text'          => 'AUMOXARIFADO',
+                    'icon'          => 'cubes',
+                    'icon_color'    => 'blue',
+                    'url'           => '#',
+                ],
+                [
+                    'text'          => 'BENS',
+                    'icon'          => 'tags',
+                    'icon_color'    => 'blue',
+                    'url'           => '#',
+                ],
+            ],
+        ],
+        [
+            'text'          => 'FINANCEIRO',
+            'icon'          => 'money',
+            'icon_color'    => 'blue',
+            'submenu'       => [
+                [
+                    'text'          => 'LICITAÇÕES',
+                    'icon'          => 'gavel',
+                    'icon_color'    => 'blue',
+                    'url'           => '#',
+                ],
+                [
+                    'text'          => 'GESTÃO DE CONTRATOS',
+                    'icon'          => 'file-text-o',
+                    'icon_color'    => 'blue',
+                    'url'           => '#',
+                ],
+            ],
+        ],
+        [
+            'text'          => 'TRANSPORTE',
+            'icon'          => 'car',
+            'icon_color'    => 'blue',
+            'submenu'       => [
+                [
+                    'text'       => 'FROTA',
+                    'icon'       => 'car',
+                    'icon_color' => 'blue',
+                    'url'        => '#',
+                ],
+                [
+                    'text'       => 'ABASTECIMENTOS',
+                    'icon'       => 'car',
+                    'icon_color' => 'blue',
+                    'url'        => '#',
+                ],
+            ],
+        ],
+         'DEP. ESPORTIVO',
+        [
+            'text'    => 'DESENVOL. ESPORTIVO',
+            'icon'    => 'font-awesome',
             'icon_color' => 'yellow',
+            'submenu' => [
+                [
+                    'text' => 'Novo',
+                    'icon' => 'plus',
+                    'icon_color' => 'yellow',
+                    'url'  => '#',
+                ],
+                
+            ],
         ],
         [
-            'text'       => 'Information',
-            'icon_color' => 'aqua',
+            'text'    => 'ESPORTE AMANDOR',
+            'icon'    => 'trophy',
+            'icon_color' => 'yellow',
+            'submenu' => [
+                [
+                    'text' => 'Novo',
+                    'icon' => 'plus',
+                    'icon_color' => 'yellow',
+                    'url'  => '#',
+                ],
+                
+            ],
         ],
+        [
+            'text'    => 'INICIAÇÃO ESPORTIVA',
+            'icon'    => 'play-circle',
+            'icon_color' => 'yellow',
+            'submenu' => [
+                [
+                    'text' => 'Novo',
+                    'icon' => 'plus',
+                    'url'  => '#',
+                ],
+                
+            ],
+        ],
+        [
+            'text'    => 'GINÁSIO POLIESPORTIVO',
+            'icon'    => 'dribbble',
+            'icon_color' => 'yellow',
+            'submenu' => [
+                [
+                    'text' => 'Novo',
+                    'icon' => 'plus',
+                    'url'  => '#',
+                ],
+                
+            ],
+        ],
+        [
+            'text'    => 'ESTÁDIO ROMEIRÃO',
+            'icon'    => 'futbol-o',
+            'icon_color' => 'yellow',
+            'submenu' => [
+                [
+                    'text' => 'Novo',
+                    'icon' => 'plus',
+                    'url'  => '#',
+                ],
+                
+            ],
+        ],
+        [
+            'text'    => 'ARRENINHA',
+            'icon'    => 'futbol-o',
+            'icon_color' => 'yellow',
+            'submenu' => [
+                [
+                    'text' => 'Novo',
+                    'icon' => 'plus',
+                    'url'  => '#',
+                ],
+                
+            ],
+        ],
+        'DEP. JUVENTUDE',
+        [
+            'text'    => '?...?',
+            'icon'    => 'eye-slash',
+            'icon_color' => 'red',
+            'submenu' => [
+                [
+                    'text' => 'Novo',
+                    'icon' => 'plus',
+                    'icon_color' => 'red',
+                    'url'  => '#',
+                ],
+            ],
+        ],
+        [
+            'text'    => 'CEU\'s',
+            'icon'    => 'university',
+            'icon_color' => 'red',
+            'submenu' => [
+                [
+                    'text' => 'Novo',
+                    'icon' => 'plus',
+                    'icon_color' => 'red',
+                    'url'  => '#',
+                ],
+            ],
+        ],
+       
     ],
 
     /*
